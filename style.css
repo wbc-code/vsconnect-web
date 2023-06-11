@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bgcolor: #1b1b1f;
+  --branco: #ffffff;
+  --preto: #000000;
+  --cinzaC: #d9d9d9;
+  --laranja: #ca6702;
+  --roxo: #6b70fb;
+  --roxoF: #cf45ff;
+  --azul: #00a3ff;
+  --nunito: 'Nunito', sans-serif;
+  --montserrat: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--nunito);
+}
+
+span {
+  font-family: var(--nunito);
+}
+
+/* CSS HEADER */
+
+body {
+  color: var(--branco);
+  background-color: var(--bgcolor);
+}
+
+header {
+  background-color: var(--bgcolor);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 70px;
+}
+
+header img {
+  width: 250px;
+}
+
+header a {
+  text-decoration: none;
+  margin: 0 0 0 35px;
+  color: var(--branco);
+  font-family: var(--nunito);
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+header a:hover:nth-child(-n + 4) {
+  color: var(--laranja);
+  transition: 0.4s;
+}
+
+.bt_header {
+  width: 10px;
+  border: solid 2px var(--laranja);
+  padding: 4px 30px;
+  border-radius: 1rem;
+}
+
+/* CSS MAIN */
+
+.bg_main {
+  width: 100%;
+  height: 710px;
+  background-image: url(img/header/bg1.png);
+  background-size: cover;
+}
+
+.efeito_bg {
+  height: 70px;
+  background: linear-gradient(180deg, #1b1b1f 25%, rgba(27, 27, 31, 0) 100%);
+}
+
+h1 {
+  font-family: var(--montserrat);
+}
+/* todo título será montserrat */
+
+p {
+  font-family: var(--nunito);
+}
+/* todo parágrafo será nunito */
+
+main h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+main p {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.botao_main > a {
+  margin-top: 50px;
+  padding: 10px 40px;
+  background: linear-gradient(#0f032e, #100627) padding-box,
+    linear-gradient(to bottom, #ca6702, #6b70fb78) border-box;
+  border-radius: 1rem;
+  border: 3px solid transparent;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--branco);
+  font-family: var(--nunito);
+}
+
+.conteudo_main {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 60px;
+}
+
+.direita > img {
+  width: 500px;
+}
+
+.esquerda {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.texto_esquerda p {
+  font-size: 24px;
+  width: 85%;
+  margin: 0 0 20px 0;
+}
+
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -20px;
+}
+
+.campo_pesquisa {
+  position: absolute;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--branco);
+  width: 55%;
+  height: 55px;
+}
+
+.campo_pesquisa > input {
+  border: transparent;
+  padding-left: 60px;
+  width: 80%;
+  height: 100%;
+  background-image: url(img/header/pesq.png);
+  background-repeat: no-repeat;
+}
+
+.campo_pesquisa > a {
+  border: solid var(--laranja) 4px;
+  padding: 5px 20px;
+  border-radius: 1rem;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--preto);
+  font-family: var(--nunito);
+}
+
+.campo_pesquisa > input::placeholder {
+  font-family: var(--nunito);
+  font-size: 18px;
+}
+
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+/* retira a borda do input ao clicar nele */
+
+.recomendacoes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 800px;
+  background-image: url(img/bgrecomendacoes.png);
+  background-size: cover;
+}
+
+.recomendacoes h1 {
+  margin-top: 20px;
+  background-image: linear-gradient(90deg, #cf45ff 0%, #00a3ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.texto_recomendacoes p {
+  font-size: 20px;
+  font-family: var(--montserrat);
+  font-weight: 200;
+}
+
+.texto_recomendacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 40px 40px;
+  width: 25%;
+  height: 400px;
+  background-color: transparent;
+  border-radius: 40px;
+  border: solid 4px var(--branco);
+  backdrop-filter: blur(5px);
+  margin-bottom: 50px;
+}
+
+.card > span {
+  margin-top: 20%;
+  font-family: var(--nunito);
+  font-size: 12px;
+}
+
+.card > img {
+  width: 20px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+
+.cards {
+  margin: 0 50px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.efeito_bg2 {
+  height: 70px;
+  background: linear-gradient(180deg, #282838 25%, rgba(27, 27, 31, 0) 100%);
+}
+
+.comofunciona {
+  height: 800px;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comofunciona h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.comofunciona p {
+  font-weight: 300;
+}
+
+.howcard {
+  text-align: center;
+  color: var(--preto);
+  width: 310px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--cinzaC);
+  padding: 30px;
+  border-radius: 60px;
+}
+
+/* AJUSTES BOTÕES CLIENTE OU DESENVOLVEDOR DO CARD */
+.howbotoes {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.botaohow {
+  margin-bottom: 5px;
+  color: var(--branco);
+  text-transform: uppercase;
+  font-family: var(--montserrat);
+  font-weight: 500;
+  border: solid 3px var(--preto);
+  padding: 8px 20px;
+  border-radius: 40px;
+  background-color: #ca6702;
+  box-shadow: 5px 5px black;
+}
+
+.dev {
+  background-color: var(--roxo);
+}
+/* AJUSTES BOTÕES CLIENTE OU DESENVOLVEDOR DO CARD */
+
+.howlogin a {
+  color: var(--preto);
+}
+
+.howcards {
+  margin: 60px 0;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.um > img {
+  filter: drop-shadow(-4px -4px 10px rgba(0 0 0 / 30%));
+}
+
+/* SEGUNDO CARD */
+
+.dois {
+  font-size: 15px;
+}
+
+/* TERCEIRO CARD */
+
+.tres > p:nth-child(3) {
+  font-style: var(--montserrat);
+  font-weight: 800;
+  color: var(--roxo);
+}
+
+.howfrase {
+  font-size: 35px;
+  font-family: var(--nunito);
+}
+
+/* ÁREA FORUM */
+
+.forum {
+  height: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(img/forum/bgforum.png);
+  background-size: cover;
+}
+
+.forum > h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.forumcliente {
+  color: var(--roxoF);
+  font-family: var(--montserrat);
+}
+
+.forumdev {
+  color: var(--azul);
+}
+
+.forumforum {
+  color: var(--laranja);
+}
+
+.forum > img {
+  width: 300px;
+}
+
+/* AREA FORUM - BOTAO */
+
+.forum > a {
+  color: var(--branco);
+  text-transform: uppercase;
+  padding: 12px 30px;
+  font-family: var(--nunito);
+  font-size: 20px;
+  background: linear-gradient(92.61deg, #cf45ff 4.49%, #00a3ff 111.14%);
+  box-shadow: 10px 10px black;
+  border-radius: 1rem;
+}
+
+.divisao {
+  width: 70%;
+}
+.posicionamento_divisao {
+  display: flex;
+  justify-content: center;
+}
+
+/* AREA FORUM - BOTAO */
+
+.forum > div {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* AREA CONHECIMENTO */
+
+.conhecimentodiv {
+  background-image: url(img/conhecimento/studying\ 1.png),
+    url(img/conhecimento/test\ 1.png);
+  background-position: bottom right, top left;
+  background-repeat: no-repeat;
+  background-size: 25%, 20%;
+}
+
+.conhecimento {
+  backdrop-filter: blur(2px);
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.conhecimento > h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+.conhecimento > div > p {
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.conhecimento > p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.conhecimento_links {
+  height: 50%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+}
+
+.botao_conhecimento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  color: var(--branco);
+  text-transform: uppercase;
+  font-weight: 800;
+  background-color: var(--roxoF);
+  box-shadow: 10px 10px var(--branco);
+  border-radius: 1rem;
+}
+
+.suporte {
+  background-image: linear-gradient(
+      180deg,
+      var(--bgcolor) 0%,
+      rgba(27, 27, 31, 0) 100%
+    ),
+    url(img/footer/foto-de-baixo-angulo-do-hipnotizante-ceu-estrelado\ 1.png);
+}
+
+.suporte_top {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px 0;
+}
+
+.suporte_top h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.suporte_top span {
+  font-size: 20px;
+}
+
+.footer {
+  margin: 0 100px;
+  height: 150px;
+}
+
+.footer a {
+  color: var(--branco);
+  text-transform: uppercase;
+}
+
+.footer > div {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 50px;
+}
+
+.footer > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.footer > div > a {
+  padding: 0 20px;
+}
+
+.footer > div > a > img {
+  width: 45px;
+}
